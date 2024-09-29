@@ -1,4 +1,0 @@
-repository "ProyectoFinalPrograII@RBryan05@cloud"
-  path "/"
-    br "/main"
-    co "/main"
