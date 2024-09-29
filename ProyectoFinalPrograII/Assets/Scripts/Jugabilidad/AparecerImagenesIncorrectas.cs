@@ -8,21 +8,16 @@ public class AparecerImagenesIncorrectas : MonoBehaviour
     public float frecuencia = 2.0f;   // Frecuencia de aparición de las imágenes
     public float minX, maxX;         // Límites en el eje X para la aparición
 
-    private float nextSpawnTime;
-
-    void Start()
-    {
-
-    }
+    private float siguienteAparicion;
 
     // Update is called once per frame
     void Update()
     {
         // Generar imágenes a intervalos de tiempo
-        if (Time.time > nextSpawnTime)
+        if (Time.time > siguienteAparicion)
         {
             AparecerImagenesMalas();
-            nextSpawnTime = Time.time + frecuencia;
+            siguienteAparicion = Time.time + frecuencia;
         }
     }
 
@@ -34,12 +29,5 @@ public class AparecerImagenesIncorrectas : MonoBehaviour
         // Seleccionar un prefab aleatorio del array goodObjects
         int randomIndex = Random.Range(0, BasuraMala.Length);
         GameObject newObject = Instantiate(BasuraMala[randomIndex], new Vector3(spawnX, transform.position.y, 0), Quaternion.identity);
-
-        // Asignar una velocidad descendente al objeto
-        Rigidbody2D rb = newObject.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.velocity = new Vector2(0, -3f); // Velocidad de caída de la imagen
-        }
     }
 }

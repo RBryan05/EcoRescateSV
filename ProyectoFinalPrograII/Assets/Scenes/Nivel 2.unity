@@ -4064,7 +4064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfc18ee9a890534e9841cd7d191e168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodObjects:
+  imagenesCorrectas:
   - {fileID: 1848793570}
   - {fileID: 1624606568}
   - {fileID: 158451984}
@@ -4072,8 +4072,8 @@ MonoBehaviour:
   - {fileID: 158393131}
   - {fileID: 283062852}
   - {fileID: 1283988102}
-  - {fileID: 131661614}
   - {fileID: 1297263054}
+  - {fileID: 131661614}
   - {fileID: 2014607244}
   - {fileID: 85710155}
   - {fileID: 1236303373}

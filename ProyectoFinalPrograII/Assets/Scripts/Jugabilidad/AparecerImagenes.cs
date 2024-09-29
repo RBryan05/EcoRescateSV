@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class AparecerImagenes : MonoBehaviour
 {
-    public GameObject[] goodObjects; // Array de prefabs de imágenes buenas
+    public GameObject[] imagenesCorrectas; // Array de prefabs de imágenes buenas
     public float frecuencia = 1.5f;   // Frecuencia de aparición de las imágenes buenas
     public float minX, maxX;         // Límites en el eje X para la aparición
 
-    private float nextSpawnTime;
-
-    void Start()
-    {
-        
-    }
+    private float siguienteAparicion;
 
     // Update is called once per frame
     void Update()
     {
         // Generar imágenes a intervalos de tiempo
-        if (Time.time > nextSpawnTime)
+        if (Time.time > siguienteAparicion)
         {
             SpawnGoodImage();
-            nextSpawnTime = Time.time + frecuencia;
+            siguienteAparicion = Time.time + frecuencia;
         }
     }
 
@@ -32,14 +27,7 @@ public class AparecerImagenes : MonoBehaviour
         float spawnX = Random.Range(minX, maxX);
 
         // Seleccionar un prefab aleatorio del array goodObjects
-        int randomIndex = Random.Range(0, goodObjects.Length);
-        GameObject newObject = Instantiate(goodObjects[randomIndex], new Vector3(spawnX, transform.position.y, 0), Quaternion.identity);
-
-        // Asignar una velocidad descendente al objeto
-        Rigidbody2D rb = newObject.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.velocity = new Vector2(0, -3f); // Velocidad de caída de la imagen
-        }
+        int randomIndex = Random.Range(0, imagenesCorrectas.Length);
+        GameObject newObject = Instantiate(imagenesCorrectas[randomIndex], new Vector3(spawnX, transform.position.y, 0), Quaternion.identity);
     }
 }

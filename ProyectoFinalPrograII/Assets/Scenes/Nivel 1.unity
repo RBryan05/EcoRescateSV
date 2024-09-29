@@ -3655,7 +3655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfc18ee9a890534e9841cd7d191e168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goodObjects:
+  imagenesCorrectas:
   - {fileID: 182152513}
   - {fileID: 1571906887}
   - {fileID: 362393701}

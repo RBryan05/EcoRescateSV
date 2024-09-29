@@ -7,11 +7,13 @@ public class GameOver : MonoBehaviour
 {
     private float puntos;
     public GameObject gameOverPrefab;
+    private AudioSource musicaDeFondo;
     public TextMeshProUGUI puntajeFinal;
     private Puntaje puntaje;
 
     void Start()
     {
+        musicaDeFondo = Camera.main.GetComponent<AudioSource>();
         puntaje = FindObjectOfType<Puntaje>();
     }
 
@@ -25,6 +27,7 @@ public class GameOver : MonoBehaviour
     public void JuegoTerminado()
     {
         Time.timeScale = 0;
+        musicaDeFondo.Pause();
         gameOverPrefab.SetActive(true);
     }
 
