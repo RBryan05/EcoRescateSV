@@ -10,6 +10,7 @@ public class Puntaje : MonoBehaviour
     private AparecerImagenes imagenesBuenas;
     private AparecerImagenesIncorrectas imagenesIncorrectas;
     private AudioSource sonidoPunto;
+    public string TipoNivel;
 
     private void Start()
     {
@@ -33,20 +34,38 @@ public class Puntaje : MonoBehaviour
 
     private void AumentarDificultad(float puntaje)
     {
-        if(puntaje > 10)
+        if (TipoNivel == null)
         {
-            imagenesBuenas.frecuencia = 1.5f;
-            imagenesIncorrectas.frecuencia = 2;
+            if (puntaje > 10)
+            {
+                imagenesBuenas.frecuencia = 1.5f;
+                imagenesIncorrectas.frecuencia = 2;
+            }
+            if (puntaje > 25)
+            {
+                imagenesBuenas.frecuencia = 1;
+                imagenesIncorrectas.frecuencia = 1f;
+            }
+            if (puntaje > 50)
+            {
+                imagenesBuenas.frecuencia = 0.5f;
+                imagenesIncorrectas.frecuencia = 0.5f;
+            }
         }
-        if(puntaje > 25)
+        else if(TipoNivel == "Todos")
         {
-            imagenesBuenas.frecuencia = 1;
-            imagenesIncorrectas.frecuencia = 1f;
-        }
-        if(puntaje > 50)
-        {
-            imagenesBuenas.frecuencia = 0.5f;
-            imagenesIncorrectas.frecuencia = 0.5f;
+            if (puntaje > 10)
+            {
+                imagenesBuenas.frecuencia = 0.8f;
+            }
+            if (puntaje > 25)
+            {
+                imagenesBuenas.frecuencia = 0.5f;
+            }
+            if (puntaje > 50)
+            {
+                imagenesBuenas.frecuencia = 0.3f;
+            }
         }
     }
 }
