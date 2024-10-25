@@ -19,6 +19,7 @@ public class PausarYReanudar : MonoBehaviour
     public Text TextoDeAdvertencia;
     private SeleccionarEscena detenerJuego;
     private CuentaRegresiva cuentaRegresiva;
+    private bool PuedePausar;
     void Start()
     {
         cuentaRegresiva = FindAnyObjectByType<CuentaRegresiva>();
@@ -38,22 +39,34 @@ public class PausarYReanudar : MonoBehaviour
         {
             if (Pausado)
             {
-                Reanudar();
+                Pausado = false;
+                MostrarCuentaRegresiva();
+                StartCoroutine(EsperarParaPausar());
             }
-            else
+            else if(!Pausado && PuedePausar)
             {
+                Pausado = true;
                 Pausa();
             }
         }
     }
 
+    private IEnumerator EsperarParaPausar()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        PuedePausar = true;
+    }
+
     public void Pausa()
     {
+        PuedePausar = false;
+        Pausado = true;
         mensajeDeAccionBoton.SetActive(false);
         Time.timeScale = 0f;
         vidaYPuntaje.SetActive(false);
         Informacion.SetActive(true);
         btnReiniciar.SetActive(true);
+        Pausado = true;
         if (musicaDeFondo != null)
         {
             musicaDeFondo.Pause(); // Pausa la música
@@ -67,6 +80,7 @@ public class PausarYReanudar : MonoBehaviour
         {
             musicaDeFondo.Play();
         }
+        Pausado = false;
     }
 
     public void PrecionarReiniciar()

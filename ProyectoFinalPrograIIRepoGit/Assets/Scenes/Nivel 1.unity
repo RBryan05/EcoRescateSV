@@ -3737,7 +3737,7 @@ MonoBehaviour:
   - {fileID: 1309821879}
   - {fileID: 413595012}
   - {fileID: 940420586}
-  frecuencia: 2.5
+  frecuencia: 3
   minX: -5.31
   maxX: 17.5
 --- !u!4 &621416309
@@ -4800,7 +4800,7 @@ MonoBehaviour:
   - {fileID: 1933817620}
   - {fileID: 1055985778}
   - {fileID: 2105187199}
-  frecuencia: 3
+  frecuencia: 3.5
   minX: -5.31
   maxX: 17.5
 --- !u!4 &897494292
@@ -6054,7 +6054,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34f7cd3d3e550754a93df8fa6078f44c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4884688ab4e09e47937c219fe051e58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6074,8 +6074,8 @@ Transform:
   m_GameObject: {fileID: 1082766934}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6729674, y: -0.21539497, z: 0.024401277}
-  m_LocalScale: {x: 2.7993343, y: 3.0918174, z: 1}
+  m_LocalPosition: {x: -4.21, y: -0.28, z: 0.024401277}
+  m_LocalScale: {x: 2.0581806, y: 2.3372169, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 418500829}
