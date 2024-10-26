@@ -11,6 +11,7 @@ public class Puntaje : MonoBehaviour
     private AparecerImagenesIncorrectas imagenesIncorrectas;
     private AudioSource sonidoPunto;
     public string TipoNivel;
+    private Victoria Victoria;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class Puntaje : MonoBehaviour
         imagenesBuenas = FindObjectOfType<AparecerImagenes>();
         imagenesIncorrectas = FindObjectOfType<AparecerImagenesIncorrectas>();
         sonidoPunto = GetComponent<AudioSource>();
+        Victoria = FindObjectOfType<Victoria>();
     }
 
     private void Update()
@@ -34,52 +36,60 @@ public class Puntaje : MonoBehaviour
 
     private void AumentarDificultad(float puntaje)
     {
-        if (TipoNivel == null)
+        if(TipoNivel == "Todos")
         {
-            if (puntaje > 7)
-            {
-                imagenesBuenas.frecuencia = 2.5f;
-                imagenesIncorrectas.frecuencia = 3;
-            }
-            if (puntaje > 10)
-            {
-                imagenesBuenas.frecuencia = 1.5f;
-                imagenesIncorrectas.frecuencia = 2;
-            }
-            if (puntaje > 20)
-            {
-                imagenesBuenas.frecuencia = 1;
-                imagenesIncorrectas.frecuencia = 1.5f;
-            }
-            if(puntaje > 40)
-            {
-                imagenesBuenas.frecuencia = 0.8f;
-                imagenesIncorrectas.frecuencia = 1.3f;
-            }
-            if (puntaje > 50)
-            {
-                imagenesBuenas.frecuencia = 0.5f;
-                imagenesIncorrectas.frecuencia = 0.5f;
-            }
-        }
-        else if(TipoNivel == "Todos")
-        {
-            if (puntaje > 10)
+            if (puntaje > 9)
             {
                 imagenesBuenas.frecuencia = 1.8f;
             }
-            if (puntaje > 25)
+            if (puntaje > 24)
             {
                 imagenesBuenas.frecuencia = 1.5f;
             }
-            if (puntaje > 50)
+            if (puntaje > 39)
             {
                 imagenesBuenas.frecuencia = 1.3f;
             }
+            if (puntaje > 49)
+            {
+                imagenesBuenas.frecuencia = 0.8f;
+            }
+            if (puntaje == 60)
+            {
+                Victoria.Win(puntaje);
+            }
         }
-        if(puntaje == 60)
+        else
         {
-            Debug.Log("Ganaste");
+            if (puntaje > 5)
+            {
+                imagenesBuenas.frecuencia = 2.8f;
+                imagenesIncorrectas.frecuencia = 3.3f;
+            }
+            if (puntaje > 9)
+            {
+                imagenesBuenas.frecuencia = 2.6f;
+                imagenesIncorrectas.frecuencia = 3.1f;
+            }
+            if (puntaje > 19)
+            {
+                imagenesBuenas.frecuencia = 2.4f;
+                imagenesIncorrectas.frecuencia = 2.9f;
+            }
+            if (puntaje > 29)
+            {
+                imagenesBuenas.frecuencia = 2f;
+                imagenesIncorrectas.frecuencia = 2.5f;
+            }
+            if (puntaje > 49)
+            {
+                imagenesBuenas.frecuencia = 1.3f;
+                imagenesIncorrectas.frecuencia = 1.8f;
+            }
+            if (puntaje == 60)
+            {
+                Victoria.Win(puntaje);
+            }
         }
     }
 }
