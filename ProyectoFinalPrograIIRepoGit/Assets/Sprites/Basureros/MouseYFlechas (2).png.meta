@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dcf625ed3858c2b4eab0735016425dc7
+guid: a16d3e3fd1c8e10409a14d2a476667dd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basureros (1)_0
+      name: MouseYFlechas (2)_0
       rect:
         serializedVersion: 2
-        x: 354
-        y: 633
-        width: 67
-        height: 66
+        x: 651
+        y: 518
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,39 +124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37ee142025c9a1b459ec5573b7deb4d2
-      internalID: 1480470079
+      spriteID: ec395679226dd8b47b43c61199db44fb
+      internalID: -1377834162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basureros (1)_1
+      name: MouseYFlechas (2)_1
       rect:
         serializedVersion: 2
-        x: 441
-        y: 650
-        width: 19
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e435a2636ea9dd447bb0e10d8727c44f
-      internalID: -113177661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basureros (1)_2
-      rect:
-        serializedVersion: 2
-        x: 799
-        y: 290
+        x: 1123
+        y: 317
         width: 323
         height: 501
       alignment: 0
@@ -166,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1df538e6e15b5d34692b24ee0d3ca6be
-      internalID: 1066411053
+      spriteID: 4f5819c57d6794c44a5656d328e9657b
+      internalID: -1045155691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basureros (1)_3
+      name: MouseYFlechas (2)_2
       rect:
         serializedVersion: 2
-        x: 309
-        y: 593
-        width: 86
-        height: 19
+        x: 504
+        y: 370
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa910afe1a6355245a960e319f75b95e
-      internalID: -1130790429
+      spriteID: 5d765ed595668514587414194366f11b
+      internalID: 376657341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basureros (1)_4
+      name: MouseYFlechas (2)_3
       rect:
         serializedVersion: 2
-        x: 400
-        y: 489
-        width: 106
-        height: 156
+        x: 651
+        y: 370
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83d4a486e18915341859a3c218153f22
-      internalID: -1686368958
+      spriteID: d2cd98b71cd9d22488ffba3e44d9a4e4
+      internalID: 1020328740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basureros (1)_5
+      name: MouseYFlechas (2)_4
       rect:
         serializedVersion: 2
-        x: 534
-        y: 474
-        width: 100
-        height: 153
+        x: 801
+        y: 370
+        width: 128
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,29 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4e8a2fef3b64bd4a9465be21b98b0db
-      internalID: 1170413999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basureros (1)_6
-      rect:
-        serializedVersion: 2
-        x: 418
-        y: 303
-        width: 216
-        height: 153
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6c3eeb3c4aa7434a828005d32b962ad
-      internalID: 480358159
+      spriteID: 05058ee25c787fd488dd52ad084ac1bd
+      internalID: 1291231237
       vertices: []
       indices: 
       edges: []
@@ -267,13 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Basureros (1)_0: 1480470079
-      Basureros (1)_1: -113177661
-      Basureros (1)_2: 1066411053
-      Basureros (1)_3: -1130790429
-      Basureros (1)_4: -1686368958
-      Basureros (1)_5: 1170413999
-      Basureros (1)_6: 480358159
+      MouseYFlechas (2)_0: -1377834162
+      MouseYFlechas (2)_1: -1045155691
+      MouseYFlechas (2)_2: 376657341
+      MouseYFlechas (2)_3: 1020328740
+      MouseYFlechas (2)_4: 1291231237
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

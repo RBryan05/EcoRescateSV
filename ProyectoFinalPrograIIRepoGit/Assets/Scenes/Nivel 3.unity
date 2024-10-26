@@ -3530,7 +3530,7 @@ MonoBehaviour:
   - {fileID: 1880343402}
   - {fileID: 364770265}
   - {fileID: 685060766}
-  frecuencia: 2.5
+  frecuencia: 3
   minX: -5.31
   maxX: 17.5
 --- !u!4 &621416309
@@ -4932,7 +4932,7 @@ MonoBehaviour:
   - {fileID: 2014607244}
   - {fileID: 85710155}
   - {fileID: 1125618836}
-  frecuencia: 3
+  frecuencia: 3.5
   minX: -5.31
   maxX: 17.5
 --- !u!4 &897494292

@@ -36,15 +36,25 @@ public class Puntaje : MonoBehaviour
     {
         if (TipoNivel == null)
         {
+            if (puntaje > 7)
+            {
+                imagenesBuenas.frecuencia = 2.5f;
+                imagenesIncorrectas.frecuencia = 3;
+            }
             if (puntaje > 10)
             {
                 imagenesBuenas.frecuencia = 1.5f;
                 imagenesIncorrectas.frecuencia = 2;
             }
-            if (puntaje > 25)
+            if (puntaje > 20)
             {
                 imagenesBuenas.frecuencia = 1;
-                imagenesIncorrectas.frecuencia = 1f;
+                imagenesIncorrectas.frecuencia = 1.5f;
+            }
+            if(puntaje > 40)
+            {
+                imagenesBuenas.frecuencia = 0.8f;
+                imagenesIncorrectas.frecuencia = 1.3f;
             }
             if (puntaje > 50)
             {
@@ -56,16 +66,20 @@ public class Puntaje : MonoBehaviour
         {
             if (puntaje > 10)
             {
-                imagenesBuenas.frecuencia = 0.8f;
+                imagenesBuenas.frecuencia = 1.8f;
             }
             if (puntaje > 25)
             {
-                imagenesBuenas.frecuencia = 0.5f;
+                imagenesBuenas.frecuencia = 1.5f;
             }
             if (puntaje > 50)
             {
-                imagenesBuenas.frecuencia = 0.3f;
+                imagenesBuenas.frecuencia = 1.3f;
             }
+        }
+        if(puntaje == 60)
+        {
+            Debug.Log("Ganaste");
         }
     }
 }

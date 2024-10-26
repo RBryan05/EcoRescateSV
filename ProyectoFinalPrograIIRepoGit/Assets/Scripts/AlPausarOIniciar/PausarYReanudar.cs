@@ -41,7 +41,6 @@ public class PausarYReanudar : MonoBehaviour
             {
                 Pausado = false;
                 MostrarCuentaRegresiva();
-                StartCoroutine(EsperarParaPausar());
             }
             else if(!Pausado && PuedePausar)
             {
@@ -134,6 +133,7 @@ public class PausarYReanudar : MonoBehaviour
     {
         Informacion.SetActive(false);
         vidaYPuntaje.SetActive(true);
+        StartCoroutine(EsperarParaPausar());
         StartCoroutine(cuentaRegresiva.IniciarCuentaRegresiva());
     }
 }
