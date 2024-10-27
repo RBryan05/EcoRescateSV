@@ -8,13 +8,12 @@ using UnityEngine.UI;
 
 public class PausarYReanudar : MonoBehaviour
 {
-    public GameObject vidaYPuntaje;
     public GameObject Informacion;
     public GameObject btnReiniciar;
     public GameObject MenuConfirmar;
     private AudioSource musicaDeFondo;
     public GameObject mensajeDeAccionBoton;
-    private bool Pausado = false;
+    private bool Pausado;
     private string accionARealizar;
     public Text TextoDeAdvertencia;
     private SeleccionarEscena detenerJuego;
@@ -35,17 +34,15 @@ public class PausarYReanudar : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P) || Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Backspace))
         {
-            if (Pausado)
+            if (Pausado == false && PuedePausar == true)
             {
-                Pausado = false;
-                MostrarCuentaRegresiva();
-            }
-            else if(!Pausado && PuedePausar)
-            {
-                Pausado = true;
                 Pausa();
+            }
+            else if (PuedePausar == false && Pausado == true)
+            {
+                MostrarCuentaRegresiva();
             }
         }
     }
@@ -62,10 +59,8 @@ public class PausarYReanudar : MonoBehaviour
         Pausado = true;
         mensajeDeAccionBoton.SetActive(false);
         Time.timeScale = 0f;
-        vidaYPuntaje.SetActive(false);
         Informacion.SetActive(true);
         btnReiniciar.SetActive(true);
-        Pausado = true;
         if (musicaDeFondo != null)
         {
             musicaDeFondo.Pause(); // Pausa la música
@@ -79,7 +74,6 @@ public class PausarYReanudar : MonoBehaviour
         {
             musicaDeFondo.Play();
         }
-        Pausado = false;
     }
 
     public void PrecionarReiniciar()
@@ -131,9 +125,9 @@ public class PausarYReanudar : MonoBehaviour
 
     public void MostrarCuentaRegresiva()
     {
-        Informacion.SetActive(false);
-        vidaYPuntaje.SetActive(true);
+        Pausado = false;
         StartCoroutine(EsperarParaPausar());
+        Informacion.SetActive(false);      
         StartCoroutine(cuentaRegresiva.IniciarCuentaRegresiva());
     }
 }
