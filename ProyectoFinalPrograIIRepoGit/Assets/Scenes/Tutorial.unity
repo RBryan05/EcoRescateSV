@@ -6525,6 +6525,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 35
+  uno: {fileID: 1555395276}
+  dos: {fileID: 437193451}
+  tres: {fileID: 1297944425}
+  Victoria: {fileID: 303366358}
+  InformacionNivel: {fileID: 1011707199}
+  JuegoTerminado: {fileID: 996329473}
 --- !u!114 &933177102
 MonoBehaviour:
   m_ObjectHideFlags: 0

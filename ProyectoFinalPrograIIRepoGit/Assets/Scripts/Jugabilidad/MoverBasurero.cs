@@ -11,6 +11,12 @@ public class MoverBasurero : MonoBehaviour
     private ManejarVidas manejarVidas;
     private SeleccionarEscena detenerJuego;
     private GameOver gameOverCodigo;
+    public GameObject uno;
+    public GameObject dos;
+    public GameObject tres;
+    public GameObject Victoria;
+    public GameObject InformacionNivel;
+    public GameObject JuegoTerminado;
     void Start()
     {
         gameOverCodigo = FindAnyObjectByType<GameOver>();
@@ -20,6 +26,15 @@ public class MoverBasurero : MonoBehaviour
 
     public void MoverseConMouse()
     {
+        if (uno != null && dos != null && tres != null && Victoria != null && InformacionNivel != null && JuegoTerminado != null)
+        {
+            if (uno.activeInHierarchy || dos.activeInHierarchy || tres.activeInHierarchy || Victoria.activeInHierarchy || InformacionNivel.activeInHierarchy || JuegoTerminado.activeInHierarchy)
+            {
+                // Si el prefab está activo, no permitir que el personaje se mueva
+                seMueve = false;
+                return; // Salir del método para que el personaje no se mueva
+            }
+        }
         // Detectar si el mouse está sobre el personaje y haces clic
         // Detectar clic en el personaje
         if (Input.GetMouseButtonDown(0))

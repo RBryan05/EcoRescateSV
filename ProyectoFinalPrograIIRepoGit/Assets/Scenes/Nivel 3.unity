@@ -6990,6 +6990,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 35
+  uno: {fileID: 148631528}
+  dos: {fileID: 1275485756}
+  tres: {fileID: 256402455}
+  Victoria: {fileID: 2055554270}
+  InformacionNivel: {fileID: 1011707199}
+  JuegoTerminado: {fileID: 261487996}
 --- !u!50 &1076407806
 Rigidbody2D:
   serializedVersion: 4
