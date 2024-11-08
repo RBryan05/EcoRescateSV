@@ -36,57 +36,52 @@ public class Puntaje : MonoBehaviour
 
     private void AumentarDificultad(float puntaje)
     {
-        if(TipoNivel == "Todos")
+        if (TipoNivel == "Todos")
         {
-            if (puntaje > 9)
+            if (puntaje <= 5)
             {
                 imagenesBuenas.frecuencia = 1.8f;
             }
-            if (puntaje > 24)
+            if (puntaje > 5 && puntaje <= 12)
             {
                 imagenesBuenas.frecuencia = 1.5f;
             }
-            if (puntaje > 39)
+            if (puntaje > 12 && puntaje <= 19)
             {
                 imagenesBuenas.frecuencia = 1.3f;
             }
-            if (puntaje > 49)
+            if (puntaje > 19)
             {
                 imagenesBuenas.frecuencia = 0.8f;
             }
-            if (puntaje == 60)
+            if (puntaje == 30)
             {
                 Victoria.Win(puntaje);
             }
         }
         else
         {
-            if (puntaje > 5)
+            if (puntaje <= 5)
             {
                 imagenesBuenas.frecuencia = 2.8f;
                 imagenesIncorrectas.frecuencia = 3.3f;
             }
-            if (puntaje > 9)
+            if (puntaje > 5 && puntaje <= 12)
             {
                 imagenesBuenas.frecuencia = 2.6f;
                 imagenesIncorrectas.frecuencia = 3.1f;
             }
-            if (puntaje > 19)
+            if (puntaje > 12 && puntaje <= 19)
             {
                 imagenesBuenas.frecuencia = 2.4f;
                 imagenesIncorrectas.frecuencia = 2.9f;
             }
-            if (puntaje > 29)
+            if (puntaje > 19)
             {
                 imagenesBuenas.frecuencia = 2f;
                 imagenesIncorrectas.frecuencia = 2.5f;
             }
-            if (puntaje > 49)
-            {
-                imagenesBuenas.frecuencia = 1.3f;
-                imagenesIncorrectas.frecuencia = 1.8f;
-            }
-            if (puntaje == 60)
+            if (puntaje == 30)
             {
                 Victoria.Win(puntaje);
             }

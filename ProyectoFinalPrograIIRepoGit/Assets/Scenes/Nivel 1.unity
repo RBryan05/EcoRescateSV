@@ -719,7 +719,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -989,7 +989,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc2b2edb3b57d2f468946d7d069ea2bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38c80e7278d48554a8f97e8a6608bb20, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1435,7 +1435,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1607,7 +1607,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1831,7 +1831,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2018,7 +2018,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2473,7 +2473,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2726,7 +2726,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2899,7 +2899,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3058,7 +3058,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3320,7 +3320,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3472,7 +3472,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -4674,7 +4674,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5088,7 +5088,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5644,7 +5644,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5937,7 +5937,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -6291,7 +6291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Felicidades! Cumpliste con el onjetivo de separar correctamente 60
+  m_text: "\xA1Felicidades! Cumpliste con el objetivo de separar correctamente 30
     residuos reciclables. Muchas gracias por ayudarme a dividir la basura seg\xFAn
     su clase. Es muy importante implementar esta pr\xE1ctica tambi\xE9n en el mundo
     real, para mantener a nuestro pa\xEDs bello, nuestro estado de salud sano y cuidar
@@ -6682,7 +6682,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -7945,7 +7945,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -8692,7 +8692,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -8930,7 +8930,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9316,7 +9316,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9821,7 +9821,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9942,7 +9942,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -10713,7 +10713,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -10872,7 +10872,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -11184,7 +11184,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -11736,7 +11736,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -12658,7 +12658,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -12893,7 +12893,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.4
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
