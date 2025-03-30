@@ -8,7 +8,7 @@ public class ApiService : MonoBehaviour
 {
     public static ApiService Instance { get; private set; }
 
-    private string url = "https://apiavanzo.onrender.com/api/jugadores/"; // Reemplaza con la URL de la API
+    private string url = "http://127.0.0.1:8000/api/jugadores/"; // Reemplaza con la URL de la API
 
     public List<Jugador> jugadoresActuales = new List<Jugador>();
     public bool datosCargados = false;
