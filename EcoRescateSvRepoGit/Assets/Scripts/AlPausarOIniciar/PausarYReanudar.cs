@@ -11,6 +11,8 @@ public class PausarYReanudar : MonoBehaviour
     public GameObject Informacion;
     public GameObject btnReiniciar;
     public GameObject MenuConfirmar;
+    public GameObject MenuConfirmarSeguirJugando;
+    public GameObject btnSeguirJugando;
     private AudioSource musicaDeFondo;
     public GameObject mensajeDeAccionBoton;
     private bool Pausado;
@@ -19,6 +21,10 @@ public class PausarYReanudar : MonoBehaviour
     private SeleccionarEscena detenerJuego;
     private CuentaRegresiva cuentaRegresiva;
     private bool PuedePausar;
+    public GameObject PantallaFelicidades;
+    public GameObject PantallaExitoAlSubirRegistro;
+
+    public GameObject PantallaVictoria;
     void Start()
     {
         cuentaRegresiva = FindAnyObjectByType<CuentaRegresiva>();
@@ -29,21 +35,6 @@ public class PausarYReanudar : MonoBehaviour
         if (musicaDeFondo != null)
         {
             musicaDeFondo.Pause(); // Pausa la música
-        }
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P) || Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Backspace))
-        {
-            if (Pausado == false && PuedePausar == true)
-            {
-                Pausa();
-            }
-            else if (PuedePausar == false && Pausado == true)
-            {
-                MostrarCuentaRegresiva();
-            }
         }
     }
 
@@ -88,6 +79,11 @@ public class PausarYReanudar : MonoBehaviour
         AbrirMenuConfirmar();
     }
 
+    public void cerrarPantallaExito()
+    {
+        PantallaExitoAlSubirRegistro.SetActive(false);
+    }
+
     public void Confirmar()
     {
         if (accionARealizar == "Reiniciar")
@@ -129,5 +125,33 @@ public class PausarYReanudar : MonoBehaviour
         StartCoroutine(EsperarParaPausar());
         Informacion.SetActive(false);      
         StartCoroutine(cuentaRegresiva.IniciarCuentaRegresiva());
+    }
+
+    public void MostrarMenuConfirmarSeguirJugando()
+    {
+        if (MenuConfirmarSeguirJugando != null)
+        {
+            MenuConfirmarSeguirJugando.SetActive(true);
+        }
+    }
+
+    public void CerrarMenuConfirmarSeguirJugando()
+    {
+        MenuConfirmarSeguirJugando.SetActive(false);
+    }
+
+    public void SeguirJugando()
+    {
+        if (PantallaVictoria != null)
+        {
+            PantallaVictoria.SetActive(false);
+        }
+        MostrarCuentaRegresiva();
+        CerrarMenuConfirmarSeguirJugando();
+    }
+
+    public void CerrarPantallaFelicidades()
+    {
+        PantallaFelicidades.SetActive(false);
     }
 }

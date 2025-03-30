@@ -80,6 +80,35 @@ public class ApiService : MonoBehaviour
     {
         StartCoroutine(GetJugadores());
     }
+
+    public void GuardarJugador(string nombre, string puntaje, string modoDeJuego, Action<bool> callback)
+    {
+        StartCoroutine(EnviarDatos(nombre, puntaje, modoDeJuego, callback));
+    }
+
+    private IEnumerator EnviarDatos(string nombre, string puntaje, string modoDeJuego, Action<bool> callback)
+    {
+        string jsonData = "{\"Nombre\":\"" + nombre + "\", \"Puntaje\":\"" + puntaje + "\", \"ModoDeJuego\":\"" + modoDeJuego + "\"}";
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Jugador guardado correctamente: " + request.downloadHandler.text);
+            callback(true);
+        }
+        else
+        {
+            Debug.LogError("Error al guardar jugador: " + request.error);
+            callback(false);
+        }
+    }
 }
 
 // Clases de datos

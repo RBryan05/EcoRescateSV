@@ -8,9 +8,12 @@ public class ColicionConObjetoCorrecto : MonoBehaviour
     private float cantidadPuntos = 1;
     public Puntaje puntaje;
     private GameOver gameOver;
+    private MostrarMenufelicidades mostrarMenuFelicidades;
+
     // Start is called before the first frame update
     void Start()
     {
+        mostrarMenuFelicidades = FindObjectOfType<MostrarMenufelicidades>();
         gameOver = FindObjectOfType<GameOver>();
     }
 
@@ -24,9 +27,10 @@ public class ColicionConObjetoCorrecto : MonoBehaviour
     {
         if (choque.CompareTag("Player"))
         {
-            puntaje.SumarPuntos(cantidadPuntos);
-            gameOver.PuntajeFinal(cantidadPuntos);
+            puntaje.SumarPuntos(cantidadPuntos);           
             Destroy(gameObject);
+            gameOver.PuntajeFinal(cantidadPuntos);
+            mostrarMenuFelicidades.PuntajeFinalAGuardar(cantidadPuntos);
         }
 
         if (choque.CompareTag("Tilemap"))
