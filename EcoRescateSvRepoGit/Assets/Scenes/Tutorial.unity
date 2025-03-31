@@ -8006,8 +8006,13 @@ MonoBehaviour:
   Informacion: {fileID: 1011707199}
   btnReiniciar: {fileID: 1632741321}
   MenuConfirmar: {fileID: 157608395}
+  MenuConfirmarSeguirJugando: {fileID: 0}
+  btnSeguirJugando: {fileID: 0}
   mensajeDeAccionBoton: {fileID: 1467185448}
   TextoDeAdvertencia: {fileID: 1443662753}
+  PantallaFelicidades: {fileID: 0}
+  PantallaExitoAlSubirRegistro: {fileID: 0}
+  PantallaVictoria: {fileID: 0}
 --- !u!114 &1207066838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10089,7 +10094,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\xA1Felicidades! Cumpliste con el objetivo de recolectar correctamente
-    30 residuos. Muchas gracias por ayudarme a recolectar la basura. Es muy importante
+    20 residuos. Muchas gracias por ayudarme a recolectar la basura. Es muy importante
     implementar esta pr\xE1ctica tambi\xE9n en el mundo real, para mantener a nuestro
     pa\xEDs bello, nuestro estado de salud sano y cuidar a nuestro planeta. \xA1Sin
     \xE9l no podemos vivir!"

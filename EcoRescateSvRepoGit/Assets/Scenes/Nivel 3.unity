@@ -3576,7 +3576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Felicidades! Cumpliste con el objetivo de separar correctamente 30
+  m_text: "\xA1Felicidades! Cumpliste con el objetivo de separar correctamente 20
     residuos org\xE1nicos. Muchas gracias por ayudarme a dividir la basura seg\xFAn
     su clase. Es muy importante implementar esta pr\xE1ctica tambi\xE9n en el mundo
     real, para mantener a nuestro pa\xEDs bello, nuestro estado de salud sano y cuidar
@@ -7469,8 +7469,13 @@ MonoBehaviour:
   Informacion: {fileID: 1011707199}
   btnReiniciar: {fileID: 1736953447}
   MenuConfirmar: {fileID: 1971818468}
+  MenuConfirmarSeguirJugando: {fileID: 0}
+  btnSeguirJugando: {fileID: 0}
   mensajeDeAccionBoton: {fileID: 1467185448}
   TextoDeAdvertencia: {fileID: 13746027}
+  PantallaFelicidades: {fileID: 0}
+  PantallaExitoAlSubirRegistro: {fileID: 0}
+  PantallaVictoria: {fileID: 0}
 --- !u!114 &1207066826
 MonoBehaviour:
   m_ObjectHideFlags: 0

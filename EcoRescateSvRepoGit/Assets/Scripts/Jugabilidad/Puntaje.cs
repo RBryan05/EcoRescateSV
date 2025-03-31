@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using JetBrains.Annotations;
 
 public class Puntaje : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class Puntaje : MonoBehaviour
     private AudioSource sonidoPunto;
     public string TipoNivel;
     private Victoria Victoria;
+
+    bool yaGano = false;
 
     private void Start()
     {
@@ -34,8 +38,13 @@ public class Puntaje : MonoBehaviour
         puntos += puntosEntrada;
     }
 
-    private void AumentarDificultad(float puntaje)
+    public float GetPuntos()
     {
+        return puntos;
+    }
+
+    private void AumentarDificultad(float puntaje)
+    {       
         if (TipoNivel == "Todos")
         {
             if (puntaje <= 5)
@@ -54,7 +63,7 @@ public class Puntaje : MonoBehaviour
             {
                 imagenesBuenas.frecuencia = 0.8f;
             }
-            if (puntaje == 30)
+            if (puntaje == 20)
             {
                 Victoria.Win(puntaje);
             }
@@ -81,9 +90,15 @@ public class Puntaje : MonoBehaviour
                 imagenesBuenas.frecuencia = 2f;
                 imagenesIncorrectas.frecuencia = 2.5f;
             }
-            if (puntaje == 30)
+            if (puntaje == 1 && !yaGano)
             {
                 Victoria.Win(puntaje);
+                Debug.Log(puntaje);
+                yaGano = true;
+            }
+            if (puntaje > 1)
+            {
+                yaGano = false;
             }
         }
     }

@@ -6467,8 +6467,13 @@ MonoBehaviour:
   Informacion: {fileID: 1472778344}
   btnReiniciar: {fileID: 858762680}
   MenuConfirmar: {fileID: 2139021715}
+  MenuConfirmarSeguirJugando: {fileID: 0}
+  btnSeguirJugando: {fileID: 0}
   mensajeDeAccionBoton: {fileID: 1531604925}
   TextoDeAdvertencia: {fileID: 327961682}
+  PantallaFelicidades: {fileID: 0}
+  PantallaExitoAlSubirRegistro: {fileID: 0}
+  PantallaVictoria: {fileID: 0}
 --- !u!114 &1045621148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11509,7 +11514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Felicidades! Cumpliste con el objetivo de separar correctamente 30
+  m_text: "\xA1Felicidades! Cumpliste con el objetivo de separar correctamente 20
     residuos no reciclables. Muchas gracias por ayudarme a dividir la basura seg\xFAn
     su clase. Es muy importante implementar esta pr\xE1ctica tambi\xE9n en el mundo
     real, para mantener a nuestro pa\xEDs bello, nuestro estado de salud sano y cuidar

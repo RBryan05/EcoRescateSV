@@ -15,18 +15,19 @@ public class PausarYReanudar : MonoBehaviour
     public GameObject btnSeguirJugando;
     private AudioSource musicaDeFondo;
     public GameObject mensajeDeAccionBoton;
-    private bool Pausado;
     private string accionARealizar;
     public Text TextoDeAdvertencia;
     private SeleccionarEscena detenerJuego;
     private CuentaRegresiva cuentaRegresiva;
-    private bool PuedePausar;
     public GameObject PantallaFelicidades;
     public GameObject PantallaExitoAlSubirRegistro;
 
-    public GameObject PantallaVictoria;
+    private Victoria victoria;
+    private Puntaje puntaje;
     void Start()
     {
+        puntaje = FindObjectOfType<Puntaje>();
+        victoria = FindObjectOfType<Victoria>();
         cuentaRegresiva = FindAnyObjectByType<CuentaRegresiva>();
         detenerJuego = FindAnyObjectByType<SeleccionarEscena>();
         Pausa();
@@ -41,13 +42,10 @@ public class PausarYReanudar : MonoBehaviour
     private IEnumerator EsperarParaPausar()
     {
         yield return new WaitForSecondsRealtime(3);
-        PuedePausar = true;
     }
 
     public void Pausa()
     {
-        PuedePausar = false;
-        Pausado = true;
         mensajeDeAccionBoton.SetActive(false);
         Time.timeScale = 0f;
         Informacion.SetActive(true);
@@ -121,7 +119,6 @@ public class PausarYReanudar : MonoBehaviour
 
     public void MostrarCuentaRegresiva()
     {
-        Pausado = false;
         StartCoroutine(EsperarParaPausar());
         Informacion.SetActive(false);      
         StartCoroutine(cuentaRegresiva.IniciarCuentaRegresiva());
@@ -131,23 +128,21 @@ public class PausarYReanudar : MonoBehaviour
     {
         if (MenuConfirmarSeguirJugando != null)
         {
-            MenuConfirmarSeguirJugando.SetActive(true);
+            MenuConfirmarSeguirJugando.SetActive(true);   
         }
+        victoria.OcultarPantallaVictoria();
     }
 
     public void CerrarMenuConfirmarSeguirJugando()
     {
         MenuConfirmarSeguirJugando.SetActive(false);
+        victoria.Win(puntaje.GetPuntos());
     }
 
     public void SeguirJugando()
     {
-        if (PantallaVictoria != null)
-        {
-            PantallaVictoria.SetActive(false);
-        }
         MostrarCuentaRegresiva();
-        CerrarMenuConfirmarSeguirJugando();
+        MenuConfirmarSeguirJugando.SetActive(false);
     }
 
     public void CerrarPantallaFelicidades()

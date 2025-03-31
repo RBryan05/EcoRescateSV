@@ -10,6 +10,7 @@ public class Victoria : MonoBehaviour
     private AudioSource musicaDeFondo;
     public TextMeshProUGUI puntajeFinal;
     private Puntaje puntaje;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +35,10 @@ public class Victoria : MonoBehaviour
     public void PuntajeFinal(float puntosEntrada)
     {
         puntos += puntosEntrada;
+    }
+
+    public void OcultarPantallaVictoria()
+    {
+        victoriaPrefab.SetActive(false);
     }
 }
