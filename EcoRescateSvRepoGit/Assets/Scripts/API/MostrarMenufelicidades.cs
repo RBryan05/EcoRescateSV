@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,21 +35,53 @@ public class MostrarMenufelicidades : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Verifica si el campo de texto no está vacío
-        if (!string.IsNullOrEmpty(NombreJugador.text))
+        // Lista de palabras prohibidas con variaciones en caracteres
+        List<string> palabrasProhibidas = new()
+    {
+        "tonto", "idiota", "estupido", "maldito", "puto", "mierda", "cabron", "hdp",
+        "pene", "culo", "caca", "sexo", "violacion", "asesino", "droga", "cocaina",
+        "heroina", "crack", "maricon", "zorra", "perra", "chingar", "chingada",
+        "pija", "forro", "mierdoso", "imbecil", "mongolico", "cerdo", "basura",
+        "imbécil", "subnormal", "degenerado", "puta", "coño", "joder", "gilipollas",
+        "pajero", "tarado", "gil", "pelotudo", "cabrón", "pendejo", "boludo", "huevon",
+        "hijueputa", "malparido", "mamon", "baboso", "cornudo", "idiotazo", "tarugo",
+        "ladron", "delincuente", "traficante", "prostituta", "proxeneta", "violador",
+        "pedofilo", "zoofilico", "sodomita", "homicida", "terrorista", "suicida",
+        "diabolico", "satanico", "demonio", "racista", "nazi", "fascista", "homofobo",
+        "machista", "xenofobo", "dictador", "mafioso", "extorsionador", "secuestrador",
+        "asesino serial", "maton", "pandillero", "narco", "camello", "acoso", "acosador",
+        "abusador", "maltratador", "necrofilico", "pornografico", "sadico", "masoquista",
+        "traficante", "adicto", "alcoholico", "borracho", "fumon", "drogadicto", "pastillero",
+        "vicioso", "corrupto", "estafador", "mentiroso", "ladrón", "roba", "robo", "robar",
+        "pijudo", "putito", "putita", "puton", "putona", "putazo", "putazo", "putazo",
+        "penudo", "vulva", "vagina", "concha", "vaginuda", "marero", "ms", "salvatrucha", "vergon",
+        "pipian", "marimacho", "marica", "mariquita"
+    };
+
+        // Diccionario con caracteres especiales usados para evadir censura
+        Dictionary<char, string> reemplazos = new()
+    {
+        { 'a', "@áàâäãå4q" }, { 'e', "3éèêë€" }, { 'i', "1!íìîï|" }, { 'o', "0óòôöõø" },
+        { 'u', "üúùûv" }, { 's', "$5ß" }, { 'c', "ç¢©" }, { 'g', "9" }, { 't', "7+" }
+    };
+
+        // Genera patrones regex para detectar variaciones de cada palabra prohibida
+        List<Regex> patrones = palabrasProhibidas.Select(palabra =>
         {
-            if (!btnConfirmarEnviarPuntaje.activeSelf)
+            string patron = palabra.ToLower();
+            foreach (var kvp in reemplazos)
             {
-                btnConfirmarEnviarPuntaje.SetActive(true);
+                patron = patron.Replace(kvp.Key.ToString(), $"[{kvp.Key}{kvp.Value}]+");
             }
-        }
-        else
-        {
-            if (btnConfirmarEnviarPuntaje.activeSelf)
-            {
-                btnConfirmarEnviarPuntaje.SetActive(false);
-            }
-        }
+            return new Regex(patron, RegexOptions.IgnoreCase);
+        }).ToList();
+
+        // Verifica si el nombre es válido
+        bool nombreValido = !string.IsNullOrEmpty(NombreJugador.text) &&
+                            !patrones.Any(regex => regex.IsMatch(NombreJugador.text));
+
+        // Activa o desactiva el botón según el nombre ingresado
+        btnConfirmarEnviarPuntaje.SetActive(nombreValido);
 
         PuntajeAGuardar.text = puntos.ToString("0");
         GameMode.text = ModoDeJuego;

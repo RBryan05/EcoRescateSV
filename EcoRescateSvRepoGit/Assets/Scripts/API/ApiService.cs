@@ -118,6 +118,7 @@ public class Jugador
     public int id;
     public string Nombre;
     public string Puntaje;
+    public string ModoDeJuego;
 }
 
 [System.Serializable]

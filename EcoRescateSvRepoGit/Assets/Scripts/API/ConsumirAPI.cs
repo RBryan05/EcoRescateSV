@@ -17,6 +17,10 @@ public class ApiManager : MonoBehaviour
     public TextMeshProUGUI Puntaje2;
     public TextMeshProUGUI Puntaje3;
 
+    public TextMeshProUGUI Modo1;
+    public TextMeshProUGUI Modo2;
+    public TextMeshProUGUI Modo3;
+
     void Start()
     {
         try
@@ -61,16 +65,19 @@ public class ApiManager : MonoBehaviour
         {
             Nombre1.text = topJugadores[0].Nombre;
             Puntaje1.text = topJugadores[0].Puntaje;
+            Modo1.text = topJugadores[0].ModoDeJuego;
         }
         if (topJugadores.Count > 1)
         {
             Nombre2.text = topJugadores[1].Nombre;
             Puntaje2.text = topJugadores[1].Puntaje;
+            Modo2.text = topJugadores[1].ModoDeJuego;
         }
         if (topJugadores.Count > 2)
         {
             Nombre3.text = topJugadores[2].Nombre;
             Puntaje3.text = topJugadores[2].Puntaje;
+            Modo3.text = topJugadores[2].ModoDeJuego;
         }
     }
 
