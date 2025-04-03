@@ -12032,7 +12032,7 @@ GameObject:
   - component: {fileID: 1408812318}
   - component: {fileID: 1408812317}
   m_Layer: 5
-  m_Name: btnSeguirJugando
+  m_Name: btnVerTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
